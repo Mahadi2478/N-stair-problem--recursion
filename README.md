@@ -4,3 +4,22 @@ There is a stair with N=3 steps, recursion will tell us how many ways we can cli
 
 <img src=https://github.com/Mahadi2478/N-stair-problem--recursion/blob/main/Capture7.PNG>
 
+```
+int countDistinctWayToClimbStair(long long nStairs)
+{
+    //base case
+    if(nStairs < 0)
+        return 0;
+    
+    if(nStairs == 0)
+        return 1;
+    
+    //R.C
+    int ans = countDistinctWayToClimbStair(nStairs-1) 
+        + countDistinctWayToClimbStair(nStairs-2);
+    
+    return ans;
+}
+
+```
+
